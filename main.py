@@ -14,5 +14,6 @@ while True:
         break
     if toggle:
         p.click()
+        t.sleep(0.05)
     if k.is_pressed("t"):
         setToggle()
