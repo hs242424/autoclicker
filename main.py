@@ -16,4 +16,3 @@ while True:
         p.click()
     if k.is_pressed("t"):
         setToggle()
-        toggle = True
