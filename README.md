@@ -1,4 +1,2 @@
 # Autoclicker
-This project is an autoclicker project using pyautogui for the clicking, keyboard for keypresses, and tkinter for the gui. This is one of my first projects. 
-You will be able to set click delay and change other settings such as even writing different sentances on repeat. Eventually, you will be able to set the amount of time you want 
-the program to run for and change other settings. I would appriciate help. 
+This project is an autoclicker project using pyautogui for the clicking, keyboard for keypresses, and tkinter for the gui. This is one of my first projects. You will be able to set click delay and change other settings such as even writing different sentances on repeat. Eventually, you will be able to set the amount of time you want the program to run for and change other settings. I would appriciate help and as long as you are not trying to destroy everything. If there are bugs in the code you can contract me through github. I am aware that there many problems and I am trying to fix them all.
