@@ -3,6 +3,7 @@ import pyautogui as p
 import time as t
 from tkinter import *
 toggle = False
+h = 1
 quitvar = False
 def quit1():
     quitvar = True
