@@ -10,7 +10,6 @@ def setToggle():
         toggle = False
     elif not toggle:
         toggle = True
-    t.sleep(0.25)
 def clicker():
     if toggle:
         p.click()
