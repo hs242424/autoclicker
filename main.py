@@ -4,6 +4,7 @@ import time as t
 from tkinter import *
 toggle = False
 quitvar1 = False
+clickVar = "click"
 def setToggle():
     global toggle
     if toggle:
@@ -13,8 +14,6 @@ def setToggle():
 def clicker():
     if toggle:
         p.click()
-    if k.is_pressed("t"):
-        setToggle()
 def startClicker():
     clicker()
 def quitfunc():
@@ -25,14 +24,20 @@ def guiSetUp():
     global label
     global button
     global button2
+    global typeVal
+    global typewritebox
+    global clickVal
     root = Tk()
+    clickVal = StringVar()
     root.title("Autoclicker")
     root.geometry('330x150')
-    label = Label(root, text="Press the button or press \"t\" to toggle the Autoclicker").place(x=9,y=0)
-    label3 = Label(root, text="Press the off button or press \"s\" to turn off the Autoclicker").place(x=9,y=50)
+    label = Label(root, text="Press the button to toggle the Autoclicker").place(x=9,y=0)
+    label3 = Label(root, text="Press the off button to turn off the Autoclicker").place(x=9,y=50)
     label2 = Label(root, text="The autoclicker is off").place(x = 9, y = 23)
     button = Button(root, text='On/Off', command = setToggle).place(x = 130, y = 23)
     quitButton = Button(root, text='Quit', command = quitfunc).place(x=190, y=23)
+    label4 = Label(root, text="What do you want to write on repeat\n(write \"Click\" or nothing if you want autoclicker)?").place(x=9,y=70)
+    typewritebox = Entry(root,textvariable = clickVal).place(x=9,y=110)
 guiSetUp()
 while True:
     root.update()
@@ -44,10 +49,14 @@ while True:
         label2 = Label(root, text="The autoclicker is on").place(x = 9, y = 23)
     else:
         label2 = Label(root, text="The autoclicker is off").place(x = 9, y = 23)
+    if clickVar == "click":
+        label5 = Label(root, text = 'clicking').place(x = 150, y = 110)
+    else:
+        label5 = Label(root, text = clickVar).place(x = 150, y = 110)
+    if k.is_pressed("enter"):              
+        clickVar = clickVal.get()
+        print(clickVar)
     clicker()
     if (quitvar1 == 1):
-        root.destroy()
-        break
-    if k.is_pressed('s'):
         root.destroy()
         break
