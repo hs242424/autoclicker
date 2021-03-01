@@ -14,7 +14,7 @@ def setToggle():
 def clicker():
     if toggle and clickVar == 'click':
         p.click()
-    elif toggle and not clickVar:
+    elif toggle and clickVar != 'click':
         p.typewrite(clickVar)
 def startClicker():
     clicker()
