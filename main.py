@@ -1,3 +1,4 @@
+import numpy
 import keyboard as k
 import pyautogui as p
 import time as t
@@ -33,7 +34,7 @@ def guiSetUp():
     clickVal = StringVar()
     root.title("Autoclicker")
     root.geometry('330x150')
-    label = Label(root, text="Press the button to toggle the Autoclicker").place(x=9,y=0)
+    label = Label(root, text="PPPPPress the button to toggle the Autoclicker").place(x=9,y=0)
     label3 = Label(root, text="Press the off button to turn off the Autoclicker").place(x=9,y=50)
     label2 = Label(root, text="The autoclicker is off").place(x = 9, y = 23)
     button = Button(root, text='On/Off', command = setToggle).place(x = 130, y = 23)
