@@ -22,6 +22,10 @@ def startClicker():
 def quitfunc():
     global quitvar1
     quitvar1 = 1
+def ON():
+    toggle = True
+def OFF():
+    toggle = False
 def guiSetUp():
     global root
     global label
@@ -37,8 +41,9 @@ def guiSetUp():
     label = Label(root, text="Press the button to toggle the Autoclicker").place(x=9,y=0)
     label3 = Label(root, text="Press the off button to turn off the Autoclicker").place(x=9,y=50)
     label2 = Label(root, text="The autoclicker is off").place(x = 9, y = 23)
-    button = Button(root, text='On/Off', command = setToggle).place(x = 130, y = 23)
-    quitButton = Button(root, text='Quit', command = quitfunc).place(x=190, y=23)
+    button = Button(root, text='On', command = ON).place(x = 168, y = 23)
+    button3 = Button(root, text='Off', command = OFF).place(x = 198, y = 23)
+    quitButton = Button(root, text='Quit', command = quitfunc).place(x=130, y=23)
     label4 = Label(root, text="What do you want to write on repeat\n(write \"Click\" or nothing if you want autoclicker)?").place(x=9,y=70)
     typewritebox = Entry(root,textvariable = clickVal).place(x=9,y=110)
 guiSetUp()
